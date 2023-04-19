@@ -1,0 +1,28 @@
+--Create a KCboutique database
+
+CREATE TABLE KCboutique (id INTEGER PRIMARY KEY, Items TEXT, Cost INTEGER, Quantity INTEGER, Sold INTEGER);
+
+INSERT INTO KCboutique VALUES (1, "foundation", 15, 50, 7);
+INSERT INTO KCboutique VALUES (2, "concealers", 10, 50, 5);
+INSERT INTO KCboutique VALUES (3, "setting powder", 12, 50, 10);
+INSERT INTO KCboutique VALUES (4, "contour sticks", 7, 50, 15);
+INSERT INTO KCboutique VALUES (5, "contour powder", 5, 50, 12);
+INSERT INTO KCboutique VALUES (6, "Blush", 5, 50, 12);
+INSERT INTO KCboutique VALUES (7, "mascara", 5, 50, 6);
+INSERT INTO KCboutique VALUES (8, "lipstick", 9, 50, 5);
+INSERT INTO KCboutique VALUES (9, "lip liners", 3, 50, 7);
+INSERT INTO KCboutique VALUES (10, "Beauty Blenders", 8, 50,7);
+INSERT INTO KCboutique VALUES (11, "Brush Set", 20, 50, 10);
+INSERT INTO KCboutique VALUES (12, "Eyelashes", 10, 50, 8);
+INSERT INTO KCboutique VALUES (13, "Primer", 8, 50, 10);
+INSERT INTO KCboutique VALUES (14, "Eyeshadow Palletes", 20, 50, 9);
+INSERT INTO KCboutique VALUES (15, "Setting Spray", 9, 50, 5);
+
+--Display the database ordered by cost.
+SELECT * FROM KCboutique ORDER BY Cost;
+
+--Display the database where items are oder by price greater than 10.
+SELECT * FROM KCboutique WHERE sold > 10 ORDER BY Cost;
+
+--What are the most 5 popular items?
+SELECT items, cost, sold FROM KCboutique order by sold desc limit 5;
